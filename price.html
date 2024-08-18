@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="p.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+ <!--navigation bar-->
+ <input type="checkbox" id="check" >
+   <label for="check">
+     <span class="material-symbols-outlined" id="btn">
+       menu
+       </span>
+       <span class="material-symbols-outlined" id="cancel">
+         cancel
+         </span>
+   </label>
+
+<div class="slide">
+ <h1>MENU</h1>
+ <ul type="none">
+   <li><a href=""> Overview</a></li>
+   <li><a href=""> Authentication</a></li>
+   <li><a href="">Endpoint</a></li>
+   <li><a href=""> Tutorial</a></li>
+   <li><a href="">Code Examples</a></li>
+   <li><a href="">API Pricing</a></li>
+ </ul>
+
+</div>
+
+
+
+
+
+
+<!---->
+<div class="back">
+   <div class="head">
+    <h1>BOOK GENERATOR AI</h1>
+   </div> 
+<!--OVERVIEW-->
+   <div class="content">
+    <H2>OVERVIEW</H2>
+    <P>The Book Generator API allows you to generate books on various topics using different language models. This documentation provides details on how to use the API, including authentication, available endpoints, and code examples.</P>
+   </div>
+<!--AUTHENTICATION-->
+   <div class="content">
+    <H2>AUTHENTICATION</H2>
+    <P>To use the API, you need to include your API key in the header of each request: </P>
+        <DIV class="outbox">
+            <div class="inbox">
+                <p>X-API-Key: YOUR_API_KEY</p>
+            </div>
+        </DIV>
+        <P>To generate an API key, use the button below: </P>
+            <DIV class="click">Generate API Key</DIV>
+        <DIV class="outbox">
+           <p> Your API Key: _______________________________________</p>
+        </DIV>
+   </div>
+<!--ENDPOINTS-->
+   <div class="content">
+    <H2>ENDPOINTS</H2>
+        <h3>Generate Book</h3>
+        <button class="post">POST</button>
+        <div class="box">/api/generate-book</div>
+        <h3>Request Body</h3>
+        <table>
+            <tr>
+                <th>PARAMETER</th>
+                <th>TYPE</th>
+                <th>DESCRIPTION</th>
+            </tr>
+            <tr>
+                <td class="blue">API</td>
+                <td>String</td>
+                <td>The API provider to use. Options: "openai" or "together"</td>
+            </tr>
+            <tr>
+                <td class="blue">MODEL</td>
+                <td>String</td>
+                <td>The specific model to use (e.g., "gpt-3.5-turbo", "gpt-4", "llama-2-70b")</td>
+            </tr>
+            <tr>
+                <td class="blue">TOPIC</td>
+                <td>String</td>
+                <td>The main topic or theme of the book</td>
+            </tr>
+            <tr>
+                <td class="blue">LANGUAGE</td>
+                <td>String</td>
+                <td>The language in which the book should be generated</td>
+            </tr>
+            <tr>
+                <td class="blue">WORD_COUNT</td>
+                <td>Integer</td>
+                <td>The approximate number of words for the generated book</td>
+            </tr>
+        </table>
+        <h3>Response</h3>
+        <div class="box2"></div>
+   </div>
+<!--TUTORIAL-->
+   <div class="content">
+    <H2>TUTORIAL</H2>
+        <h3>Step 1: Obtain an API Key</h3>
+        <p>
+            Generate an API key using the button in the Authentication section above.
+        </p>
+        <h3>Step 2: Make Request</h3>
+        <p>
+            Use your preferred programming language or tool to make a POST request to the /api/generate-book endpoint. Include your API key in the header and the required parameters in the request body.
+        </p>
+        <h3>Step 3: Handle Response</h3>
+        <p>
+            The API will return a response with a job ID. You can use this ID to check the status of your book generation job.
+        </p>
+        <h3>Step 4: Retrieve the Generated Book</h3>
+        <p>
+            Once the job is complete, you can retrieve the generated book using the job ID (endpoint to be implemented).
+        </p>
+   </div>
+<!--CODE EXAMPLES-->
+   <div class="content">
+    <H2>CODE EXAMPLES</H2>
+        <h3>Python</h3>
+        <div class="box4"></div>
+        <h3>JavaScript(Node.js)</h3>
+        <div class="box4"></div>
+   </div>
+<!--API PRICING-->
+   <div class="content">
+    <H2>API PRICING</H2>
+    <P>Our API pricing is based on the model used and the number of tokens processed. Here's a breakdown of the costs: </P>
+        <table>
+            <tr>
+                <th>API</th>
+                <th>MODEL</th>
+                <th>PRICE PER 1K TOKENS</th>
+            </tr>
+            <tr>
+                <td>OpenAI</td>
+                <td>GPT-3.5</td>
+                <td>$0.002</td>
+            </tr>
+            <tr>
+                <td>OpenAI</td>
+                <td>GPT-4</td>
+                <td>$0.03</td>
+            </tr>
+            <tr>
+                <td>Together AI</td>
+                <td>Llama-2-70b</td>
+                <td>$0.0008</td>
+            </tr>
+            <tr>
+                <td>Together AI</td>
+                <td>Llama-2-13b</td>
+                <td>$0.0006</td>
+            </tr>
+        </table>
+        <H3>Token Estimation</H3>
+        <p>On average, 1 token is approximately 4 characters or 0.75 words. For precise pricing, we recommend using our token calculator tool.</p>
+        <H3>Billing</H3>
+        <p>You will only be charged for the tokens used in generating the book. The API tracks token usage and bills accordingly. Detailed usage reports are available in your account dashboard.</p>
+    </div>
+</div>
+</body>
+</html>
